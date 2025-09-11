@@ -1,0 +1,91 @@
+/* Reset-ish */
+* { box-sizing: border-box; }
+html,body { height:100%; margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+/* Themes */
+body.theme-dark { background: radial-gradient(circle at 10% 10%, #0b0b0b, #000 40%); color: #e6e6e6; }
+body.theme-light { background: #f6f6f8; color: #111; }
+
+/* Clouds layer */
+#clouds { position: fixed; inset:0; pointer-events:none; z-index:0; opacity:0.28; overflow:hidden; }
+.cloud { position:absolute; width:260px; height:180px; will-change:transform; filter: drop-shadow(0 10px 16px rgba(0,0,0,0.35)); }
+
+/* Topbar */
+.topbar { position:relative; z-index:30; display:flex; align-items:center; justify-content:space-between; padding:14px 28px; backdrop-filter: blur(6px); }
+.brand { display:flex; align-items:center; gap:12px; }
+.logo-ic { width:36px; height:36px; fill:#ff5555; border-radius:10px; }
+.title .name { font-weight:700; font-size:16px; }
+.title .meta { font-size:12px; opacity:0.72; margin-top:2px; }
+
+/* Actions */
+.controls { display:flex; align-items:center; gap:10px; }
+.icon-btn { background:transparent; border:1px solid rgba(255,255,255,0.06); padding:8px; border-radius:10px; cursor:pointer; color:inherit; }
+.cta { background:linear-gradient(90deg,#b91c1c,#ef4444); color:white; padding:8px 12px; border-radius:10px; cursor:pointer; border:none; }
+.cta.subtle { background:transparent; border:1px solid rgba(255,255,255,0.06); color:inherit; }
+
+/* Hero */
+.hero { position:relative; z-index:10; display:flex; gap:40px; padding:48px 28px; align-items:center; justify-content:space-between; max-width:1200px; margin:0 auto; }
+.hero-left { max-width:620px; }
+.hero-title { font-size:36px; margin:0 0 6px; letter-spacing:-0.02em; background: linear-gradient(90deg,#fff,#ffb3b3 60%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.hero-sub { margin:0 0 12px; opacity:0.8; }
+.hero-bio { margin:0 0 18px; line-height:1.5; opacity:0.9; font-size:15px; }
+.socials { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+.socials a { padding:6px 10px; border-radius:8px; background:rgba(255,255,255,0.03); color:inherit; text-decoration:none; font-size:13px; border:1px solid rgba(255,255,255,0.03); }
+
+/* Sharingan container */
+.sharingan-wrap { width:260px; height:260px; display:grid; place-items:center; position:relative; }
+.sharingan { width:240px; height:240px; transform-origin:50% 50%; transition:filter .25s ease; }
+
+/* Mangekyō aura */
+.mangekyo { position:absolute; inset:0; border-radius:999px; pointer-events:none; mix-blend-mode:screen; opacity:0.0; transition:opacity .5s ease; }
+.mangekyo.on { opacity:1; background: radial-gradient(circle at 50% 50%, rgba(239,68,68,0.18), rgba(0,0,0,0)); filter: blur(26px) saturate(1.2); }
+
+/* Sections */
+.section { max-width:1200px; margin:18px auto; padding:20px 28px; }
+.section-title { font-size:20px; margin-bottom:12px; color:#ff7b7b; }
+
+/* Cards grid */
+.cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; }
+.card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(255,255,255,0.04); padding:18px; border-radius:14px; box-shadow: 0 8px 28px rgba(0,0,0,0.4); }
+.card-head { display:flex; gap:12px; align-items:center; margin-bottom:8px; }
+.card .emoji { font-size:20px; }
+.tags { display:flex; gap:8px; list-style:none; padding:0; margin:10px 0 0; flex-wrap:wrap; }
+.tags li { font-size:12px; padding:6px 8px; border-radius:999px; background:rgba(255,255,255,0.03); color:inherit; border:1px solid rgba(255,255,255,0.03); }
+
+/* About + Skills split */
+.split { display:grid; grid-template-columns: 1fr 1fr; gap:28px; align-items:start; }
+
+/* Skills badges */
+.skills { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+.skills span { padding:8px 10px; border-radius:999px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.03); font-size:13px; }
+
+/* Contact */
+.contact-links { display:flex; gap:12px; margin-top:8px; }
+.contact-links a { text-decoration:none; color:inherit; padding:8px 12px; border-radius:8px; background:rgba(255,255,255,0.02); }
+
+/* Footer */
+.footer { text-align:center; padding:18px; opacity:0.7; margin-top:20px; }
+
+/* Chat widget */
+#chat { position:fixed; z-index:40; right:22px; bottom:20px; }
+#chatOpen { padding:10px 14px; border-radius:12px; background:linear-gradient(90deg,#ef4444,#b91c1c); border:none; color:white; cursor:pointer; }
+.chat-dialog { width:320px; border-radius:12px; border:none; padding:0; box-shadow: 0 20px 50px rgba(0,0,0,0.6); }
+.chat-form { display:flex; flex-direction:column; background:linear-gradient(180deg, rgba(12,12,12,0.98), rgba(8,8,8,0.98)); color:inherit; border-radius:12px; overflow:hidden; }
+.chat-header { display:flex; justify-content:space-between; align-items:center; padding:12px 14px; font-weight:700; }
+#chatLog { height:220px; padding:12px; overflow:auto; background:rgba(0,0,0,0.25); color:inherit; font-size:14px; }
+.chat-input-row { display:flex; gap:8px; padding:12px; }
+.chat-input-row input { flex:1; padding:8px 10px; border-radius:10px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit; }
+.chat-input-row button { padding:8px 10px; border-radius:10px; background:#ef4444; color:white; border:none; cursor:pointer; }
+
+/* subtle hover effects */
+.card:hover { transform: translateY(-6px); transition: transform .25s ease; }
+
+/* make it responsive */
+@media (max-width:880px) {
+  .hero { flex-direction:column; gap:18px; padding:26px; }
+  .split { grid-template-columns: 1fr; }
+  .sharingan-wrap { align-self:center; margin-top:12px; }
+}
+.hidden {
+  display: none;
+}
