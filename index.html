@@ -1,181 +1,38 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Deepak Jadhav — AI Engineer (Itachi Theme)</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="theme-dark">
-  <!-- Floating Clouds container -->
-  <div id="clouds" aria-hidden></div>
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepak Jadhav — AI Systems Engineer & Autonomous Software Builder</title>
+    <meta name="description" content="Engineering portfolio of Deepak Jadhav. Specializing in Multi-Agent Autonomous Systems, LLM Routing, Topological Supply-Chain Integrity, and Scalable AI Infrastructure." />
+    <meta name="author" content="Deepak Jadhav" />
+    <meta name="theme-color" content="#08090b" />
+    <link rel="canonical" href="https://deepxkjadhav.github.io/" />
 
-  <!-- Top bar -->
-  <header class="topbar">
-    <div class="brand">
-      <div class="logo"> <svg viewBox="0 0 24 24" class="logo-ic" aria-hidden><circle cx="12"cy="12" r="9" /></svg></div>
-      <div class="title">
-        <div class="name">Deepak Jadhav</div>
-        <div class="meta">AI Engineer · 3rd Year · Parul University</div>
-      </div>
-    </div>
-    <div class="controls">
-      <button id="themeToggle" class="icon-btn" title="Toggle theme">🌙</button>
-      <button id="soundToggle" class="icon-btn" title="UI sounds">🔊</button>
-      <button id="musicToggle" class="cta">🎶 Play Music</button>
-      <a href="#contact" class="cta subtle">Collaborate</a>
-    </div>
-  </header>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://deepxkjadhav.github.io/" />
+    <meta property="og:title" content="Deepak Jadhav — AI Systems Engineer" />
+    <meta property="og:description" content="Autonomous Multi-Agent Systems, Dynamic Multi-LLM Routing, Topological Supply-Chain Integrity, and Scalable AI Infrastructure." />
+    <meta property="og:image" content="./og-image.png" />
 
-  <!-- Hero -->
-  <main>
-    <section class="hero">
-      <div class="hero-left">
-        <h1 class="hero-title">Deepak Jadhav</h1>
-        <p class="hero-sub">AI Engineer · 3rd Year · Parul University</p>
-        <p class="hero-bio">I build intelligent user experiences that feel alive — blending ML, slick UI, and playful anime-inspired interactions.</p>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://deepxkjadhav.github.io/" />
+    <meta property="twitter:title" content="Deepak Jadhav — AI Systems Engineer" />
+    <meta property="twitter:description" content="Autonomous Multi-Agent Systems, Dynamic Multi-LLM Routing, Topological Supply-Chain Integrity, and Scalable AI Infrastructure." />
+    <meta property="twitter:image" content="./og-image.png" />
 
-        <div class="socials">
-          <a href="https://www.linkedin.com/in/Deepak_Jadhav" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://www.instagram.com/deepxk_jadhav" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://dev.to/Deepak_Jadhav" target="_blank" rel="noreferrer">Dev</a>
-          <a href="https://github.com/Deepak_Jadhav" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 
-        <p class="hint">Hint: type the Konami code to unlock <strong>Mangekyō Mode</strong>.</p>
-      </div>
-
-      <div class="hero-right">
-        <!-- Sharingan container -->
-<div id="sharinganWrap" class="sharingan-wrap" aria-hidden>
-  <!-- Normal Sharingan (default) -->
-  <svg id="sharinganNormal" viewBox="0 0 200 200" class="sharingan" role="img" aria-label="Sharingan spinner">
-    <defs>
-      <radialGradient id="rgNormal" cx="50%" cy="50%">
-        <stop offset="0%" stop-color="#7f1d1d"/>
-        <stop offset="60%" stop-color="#dc2626"/>
-        <stop offset="100%" stop-color="#111827"/>
-      </radialGradient>
-    </defs>
-    <circle cx="100" cy="100" r="90" fill="url(#rgNormal)" stroke="#0a0a0a" stroke-width="6" />
-    <g id="tomoeGroup">
-      <g transform="rotate(0 100 100)">
-        <path d="M100 40 C 120 70, 130 95, 100 115 C 70 95, 80 70, 100 40" fill="#0b0b0b"/>
-        <circle cx="120" cy="90" r="10" fill="#0b0b0b"/>
-      </g>
-      <g transform="rotate(120 100 100)">
-        <path d="M100 40 C 120 70, 130 95, 100 115 C 70 95, 80 70, 100 40" fill="#0b0b0b"/>
-        <circle cx="120" cy="90" r="10" fill="#0b0b0b"/>
-      </g>
-      <g transform="rotate(240 100 100)">
-        <path d="M100 40 C 120 70, 130 95, 100 115 C 70 95, 80 70, 100 40" fill="#0b0b0b"/>
-        <circle cx="120" cy="90" r="10" fill="#0b0b0b"/>
-      </g>
-    </g>
-    <circle cx="100" cy="100" r="10" fill="#0b0b0b" />
-  </svg>
-
-  <!-- Mangekyō Sharingan (hidden until Konami code) -->
-  <svg id="sharinganMangekyo" viewBox="0 0 200 200" class="sharingan hidden" role="img" aria-label="Mangekyō Sharingan spinner">
-    <defs>
-      <radialGradient id="rgMangekyo" cx="50%" cy="50%">
-        <stop offset="0%" stop-color="#7f1d1d"/>
-        <stop offset="60%" stop-color="#dc2626"/>
-        <stop offset="100%" stop-color="#111827"/>
-      </radialGradient>
-    </defs>
-    <circle cx="100" cy="100" r="90" fill="url(#rgMangekyo)" stroke="#0a0a0a" stroke-width="6" />
-    <g id="mangekyoBlades">
-      <path d="M100 35 Q125 80, 100 100 Q75 80, 100 35" fill="#0b0b0b"/>
-      <path d="M165 100 Q120 125, 100 100 Q120 75, 165 100" fill="#0b0b0b"/>
-      <path d="M100 165 Q75 120, 100 100 Q125 120, 100 165" fill="#0b0b0b"/>
-    </g>
-    <circle cx="100" cy="100" r="10" fill="#0b0b0b" />
-  </svg>
-
-  <!-- Aura glow -->
-  <div id="mangekyoAura" class="mangekyo hidden"></div>
-</div>
-
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="grid cards">
-        <article class="card">
-          <div class="card-head"><span class="emoji">👁</span><h3>GhostVision</h3></div>
-          <p>Edge-optimized CV pipeline with lightweight attention + temporal smoothing.</p>
-          <ul class="tags"><li>Computer Vision</li><li>Edge AI</li><li>WebGL</li></ul>
-        </article>
-
-        <article class="card">
-          <div class="card-head"><span class="emoji">🌀</span><h3>Sentient-UI</h3></div>
-          <p>An adaptive UI system that adjusts layout, tone and density using on-device signals.</p>
-          <ul class="tags"><li>LLM</li><li>UX</li><li>Reinforcement</li></ul>
-        </article>
-
-        <article class="card">
-          <div class="card-head"><span class="emoji">🔥</span><h3>Kaelith-AI</h3></div>
-          <p>Dialogue engine with slot-free memory graphs and tool-use — optimized for small devices.</p>
-          <ul class="tags"><li>Agents</li><li>Graph Memory</li><li>Tool Use</li></ul>
-        </article>
-
-        <article class="card">
-          <div class="card-head"><span class="emoji">🧠</span><h3>NeuroNosh</h3></div>
-          <p>Meal planning model that balances macros with cravings — camera ingredient recognition.</p>
-          <ul class="tags"><li>Vision</li><li>Nutrition</li><li>Recommendation</li></ul>
-        </article>
-      </div>
-    </section>
-
-    <!-- About + Skills -->
-    <section id="about" class="section split">
-      <div>
-        <h2>About</h2>
-        <p>I’m a third-year AI Engineer at Parul University. I love building systems where models and interfaces dance together.</p>
-        <p>When I’m not tuning models, I craft micro-interactions inspired by ninja discipline — calm on the surface, powerful underneath.</p>
-      </div>
-      <div>
-        <h2>Skills</h2>
-        <div class="skills">
-          <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>ONNX</span><span>OpenCV</span>
-          <span>JS/TS</span><span>React</span><span>Next.js</span><span>Tailwind</span><span>Framer Motion</span>
-          <span>LangChain</span><span>Agents</span><span>MLOps</span><span>Docker</span><span>Linux</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section contact">
-      <h2>Let’s build something cool</h2>
-      <p>DM me on Instagram or LinkedIn — I reply fast.</p>
-      <div class="contact-links">
-        <a href="https://www.instagram.com/deepxk_jadhav" target="_blank" rel="noreferrer">Instagram</a>
-        <a href="https://www.linkedin.com/in/Deepak_Jadhav" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://dev.to/Deepak_Jadhav" target="_blank" rel="noreferrer">Dev</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">© <span id="year"></span> Deepak Jadhav · Crafted with discipline & curiosity.</footer>
-
-  <!-- Chat widget (dialog) -->
-  <div id="chat">
-    <button id="chatOpen" aria-expanded="false">💬 Chat Kaelith</button>
-    <dialog id="chatDialog" class="chat-dialog" role="dialog" aria-modal="true" aria-label="Kaelith chat">
-      <form method="dialog" class="chat-form">
-        <header class="chat-header">Kaelith — Portfolio Sentinel <button id="chatClose" aria-label="Close">✕</button></header>
-        <div id="chatLog" class="chat-log" aria-live="polite"></div>
-        <div class="chat-input-row">
-          <input id="chatInput" placeholder="Ask about GhostVision, Sentient-UI…" />
-          <button id="chatSend" type="button">Send</button>
-        </div>
-      </form>
-    </dialog>
-  </div>
-
-  <!-- Background music (drop your bg-music.mp3 in the folder) -->
-  <audio id="bgMusic" src="bg-music.mp3" loop preload="auto"></audio>
-
-  <script src="script.js"></script>
-</body>
+    <!-- Fonts: Space Grotesk, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#08090b] text-[#f2f2f0] antialiased selection:bg-[#8aa8ff]/20 selection:text-[#a3bcff] overflow-x-hidden min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
